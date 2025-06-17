@@ -23,7 +23,6 @@ class student{
           * cgpaPtr = *(obj.cgpaPtr); 
      }  
 
-
      // Deconstructor for delecting dynamic memory allocation
 
      ~student(){
@@ -38,22 +37,16 @@ class student{
 
 };
 
-
-
 // For Inheritance
-
-
 class person{
 
 public: 
     string name ;
     string address;
     int roll;
-     
-   person(){
-
+    person(){
      }
-    person(string name,string address){
+        person(string name,string address){
         this->  name = name;
         this-> address= address; 
     }
@@ -63,18 +56,14 @@ public:
        cout<<"Parent deconstructor"<<endl;
 
     }
-   
-
 };
 
 class worker : public person{
-
   public: 
 //   Calling parent constructor in clild constructor
   worker(string name,string address,int roll){
              this-> roll= roll;
   }
-
   ~worker(){
      cout<<"Child deconstructor"<<endl;
   }
@@ -90,24 +79,13 @@ class worker : public person{
 // Types of inheritance
 //1. Single inheritance
 
-
-
-
-
-
-
-
 int main(){
-    //  student s1("Rahul yadav",8.34);
-     // Shallow copy / here pointer concept not exist     
-    // student s2(s1);
-
-    // s2.getInfo();
-
-
- // For Inheritance 
+     student s1("Rahul yadav",8.34);
+     Shallow copy / here pointer concept not exist     
+     student s2(s1);
+     s2.getInfo();
  
-  worker w1("Avinash sharma","Birgubj",456);
-  
+// For Inheritance 
+worker w1("Avinash sharma","Birgubj",456);
 w1.getInfo();
 }
